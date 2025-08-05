@@ -1,0 +1,50 @@
+
+<!-- <div>
+    <button [ngClass]="{
+        'disabled' : button_disabled,
+        'btn': true,
+        'btn-danger': true
+    }" class="" (click)="text_color= 'text-danger'">Color Rojo</button>
+    <button [class]="{
+        'disabled' : button_disabled
+    }" class="btn btn-success mx-2" (click)="text_color= 'text-success'">Color Verde</button>
+    <button [class]="{
+        'disabled' : button_disabled
+    }" class="btn btn-primary" (click)="text_color= 'text-primary'">Color Azul</button>
+</div>
+ -->
+
+<!-- Asignacion de clases de manera dinamica -->
+
+<!-- p [class]="text_color">Texto que cambiara de color</p>
+
+
+<button class="btn btn-secondary" (click)="button_disabled= !button_disabled">
+    Activar/Desactivar
+</button> -->
+
+<!-- MANEJO DE CLASES DE MANERA DINAMICA EN OTRA FORMA -->
+
+<!-- <div>    <button [disabled]="false" class="btn btn-danger" (click)="text_color= 'text-danger'">Color Rojo</button>
+    <button [disabled]="false" class="btn btn-success mx-2" (click)="text_color= 'text-success'">Color Verde</button>
+    <button [disabled]="false" class="btn btn-primary" (click)="text_color= 'text-primary'">Color Azul</button>
+</div>
+
+<p>Texto que cambiara de color</p>
+
+
+<button class="btn btn-secondary" (click)="button_disabled= !button_disabled">
+    Activar/Desactivar
+</button> -->
+
+<div>
+    <button class="btn btn-primary" (click)="src = 'https://images.pexels.com/photos/18267651/pexels-photo-18267651.jpeg'">
+      Imagen 1
+    </button>
+
+    <button class="btn btn-danger" (click)="src = 'https://images.pexels.com/photos/18199980/pexels-photo-18199980.jpeg' ">
+      Imagen 2
+    </button>
+</div>
+
+<img [src]="src" alt="">

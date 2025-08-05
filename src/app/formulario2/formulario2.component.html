@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-body">
+        
+        <!-- Se accede a la informacion del formulario mediante el metodo submit -->
+        <form (ngSubmit)="procesar()">
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Nombre:
+                </label>
+
+                <input type="text" name="nombre"  class="form-control" placeholder="Por favor ingrese un nombre" [(ngModel)]="persona.nombre">
+            </div>
+
+            <div>
+                <label class="form-label">
+                    Edad:
+                </label>
+
+                <input type="number" name="edad" class="form-control" placeholder="Por favor ingrese una edad" [(ngModel)]="persona.edad">
+            </div>
+            <button class="btn btn-primary">
+                Enviar
+            </button>
+
+        </form>
+    </div>
+</div>
+
+<!-- Interpolacion con uso de Pipes -->
+{{persona | json}}
