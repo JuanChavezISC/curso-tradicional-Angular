@@ -10,7 +10,9 @@ import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { Formulario2Component } from './formulario2/formulario2.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Formulario3reactivoComponent } from './formulario3reactivo/formulario3reactivo.component';
+import { ChildrenComponent } from './children/children.component';
 
 
 @NgModule({
@@ -23,14 +25,17 @@ import { FormsModule } from '@angular/forms';
     BuclesComponent,
     SwitchComponent,
     Formulario2Component,
-    
+    Formulario3reactivoComponent,
+    ChildrenComponent
     
   ],
   // En imports van las configuraciones adicionales de modulos a parte
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // Uso de formularios reactivos
+    ReactiveFormsModule
     
   ],
   providers: [],

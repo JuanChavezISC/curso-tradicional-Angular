@@ -2,7 +2,7 @@
     <div class="card-body">
         
         <!-- Se accede a la informacion del formulario mediante el metodo submit -->
-        <form (ngSubmit)="procesar()">
+        <form (ngSubmit)="procesar()" #formContact="ngForm">
 
             <div class="mb-2">
                 <label class="form-label">
@@ -12,7 +12,7 @@
                 <input type="text" name="nombre"  class="form-control" placeholder="Por favor ingrese un nombre" 
                                     [(ngModel)]="persona.nombre" required #name="ngModel">
 
-                <div class="alert alert-danger mt-2" [hidden]="name.valid">
+                <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
                     El nombre es obligatorio
                 </div>
             </div>
@@ -23,15 +23,19 @@
                 </label>
 
                 <input type="number" name="edad" class="form-control" placeholder="Por favor ingrese una edad" 
-                                    [(ngModel)]="persona.edad" required>
+                                    [(ngModel)]="persona.edad" required #edad="ngModel">
+                <div class="alert alert-danger mt-2" [hidden]="edad.valid || edad.pristine">
+                    La edad es obligatorio
+                </div>
             </div>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" [disabled]="formContact.invalid">
                 Enviar
             </button>
 
         </form>
     </div>
 </div>
+
 
 <!-- {{name.errors | json}}
 

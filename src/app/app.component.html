@@ -1,5 +1,7 @@
 <div class="container">
-    <h1> {{title}} </h1>
+    <h2> Componente Padre </h2>
 
-<app-formulario2></app-formulario2>
+    <input type="text" class="form-control" [(ngModel)] = "title">
+
+    <app-children [title]=" title"></app-children>
 </div>
