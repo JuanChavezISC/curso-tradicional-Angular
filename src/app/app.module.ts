@@ -13,6 +13,8 @@ import { Formulario2Component } from './formulario2/formulario2.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Formulario3reactivoComponent } from './formulario3reactivo/formulario3reactivo.component';
 import { ChildrenComponent } from './children/children.component';
+import { AddMessagesComponent } from './add-messages/add-messages.component';
+import { ListMessagesComponent } from './list-messages/list-messages.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ChildrenComponent } from './children/children.component';
     SwitchComponent,
     Formulario2Component,
     Formulario3reactivoComponent,
-    ChildrenComponent
+    ChildrenComponent,
+    AddMessagesComponent,
+    ListMessagesComponent
     
   ],
   // En imports van las configuraciones adicionales de modulos a parte
